@@ -11,8 +11,12 @@ jobs:
         uses: actions/checkout@v4
         # with:
         #   token: ${{ steps.generate_token.output.token }}
+      - name: Pull remote
+        run: git pull
       - name: add file
-        run: touch helloworld.txt
+        run: |
+          touch helloworld.txt
+          echo Hello >> helloworld.txt
       - name: Commit change 
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
