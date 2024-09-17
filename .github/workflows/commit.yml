@@ -16,7 +16,7 @@ jobs:
       - name: add file
         run: |
           touch helloworld.txt
-          echo Hello >> helloworld.txt
+          echo HelloJohn >> helloworld.txt
       - name: Commit change 
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
