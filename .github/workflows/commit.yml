@@ -10,7 +10,7 @@ jobs:
       - name: chekout
         uses: actions/checkout@v4
         # with:
-        #   token: ${{ steps.generate_token.output.token }}
+        #   token: ${{ steps.generate_token.output.token }} change
       - name: Pull remote
         run: git pull
       - name: add file
