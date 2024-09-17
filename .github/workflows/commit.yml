@@ -5,7 +5,7 @@ jobs:
   commit-push:
     runs-on: ubuntu-22.04
     permission:
-      content: write
+      contents: write
     steps:
       - name: chekout
         uses: actions/checkout@v4
