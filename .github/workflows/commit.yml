@@ -1,0 +1,17 @@
+name: Commit
+on: push
+
+jobs:
+  commit-push:
+    runs-on: ubuntu-22.04
+    permission:
+      content: write
+    steps:
+      - name: chekout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ steps.generate_token.output.token }}
+      - name: Commit change 
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: Automated Change  
